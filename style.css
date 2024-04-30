@@ -1,0 +1,170 @@
+/* reset css */
+
+:root {
+  --line-height: 1.5;
+  --h1: 3rem;
+  --h2: 2.5rem;
+  --h3: 2rem;
+  --h4: 1.5rem;
+  --h5: 1.25rem;
+  --h6: 1rem;
+  --p: 1rem;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: rgb(255, 255, 255);
+  color: rgb(51, 51, 51);
+  min-height: 100vh;
+  font-size: var(--p);
+  line-height: calc(var(--line-height) * var(--p));
+}
+
+h1 {
+  font-size: 3rem;
+  font-weight: 800;
+  line-height: calc(var(--line-height) * var(--h1));
+}
+
+h2 {
+  font-size: var(--h2);
+  font-weight: 700;
+  line-height: calc(var(--line-height) * var(--h2));
+}
+
+h3 {
+  font-size: var(--h3);
+  font-weight: 600;
+  line-height: calc(var(--line-height) * var(--h3));
+}
+
+h4 {
+  font-size: var(--h4);
+  font-weight: 500;
+  line-height: calc(var(--line-height) * var(--h4));
+}
+
+h5 {
+  font-size: var(--h5);
+  font-weight: 400;
+  line-height: calc(var(--line-height) * var(--h5));
+}
+
+h6 {
+  font-size: var(--h6);
+  font-weight: 300;
+  line-height: calc(var(--line-height) * var(--h6));
+}
+
+/* header */
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+}
+
+/* app */
+.app {
+  display: flex;
+  padding: 0rem 2rem;
+}
+
+main {
+  flex: 3;
+}
+
+aside {
+  flex: 1;
+  border-left: 1px solid rgb(209, 209, 209);
+  /* background-color: aquamarine; */
+}
+
+/* form */
+form {
+  padding: 1rem;
+}
+
+form > div {
+  /* background-color: red; */
+  display: flex;
+  flex-direction: column;
+  padding: 1rem 0;
+  gap: 1rem;
+  border-bottom: 1px solid rgb(237, 237, 237);
+}
+
+form input {
+  padding: 0.7rem 0.5rem;
+}
+
+form button {
+  padding: 1rem;
+  border: none;
+  background-color: rgb(0, 0, 0);
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: opacity.5s ease;
+}
+
+form button:hover {
+  background-color: rgb(0, 0, 0);
+  opacity: 0.6;
+}
+
+form button,
+form input {
+  border-radius: 0.5rem;
+}
+
+/* error */
+.error-msg {
+  display: none;
+  color: red;
+  background-color: rgb(255, 203, 203);
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  border: 1px solid red;
+  gap: 0.5rem;
+}
+
+.error-msg > p {
+  font-size: 0.8rem;
+  line-height: calc(var(--line-height) * 0.8);
+}
+
+/* result */
+.result-container {
+  display: none;
+  padding: 1rem;
+}
+
+.result {
+  padding: 0.5rem;
+  border: 1px solid rgb(0, 149, 0);
+  border-radius: 0.5rem;
+  background-color: rgb(224, 255, 224);
+  position: relative;
+  font-size: 1rem;
+  line-height: calc(var(--line-height) * 1);
+}
+
+.result .close-dosage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 1rem;
+  right: 0.5rem;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  cursor: pointer;
+  background-color: rgb(0, 149, 0);
+  color: white;
+}

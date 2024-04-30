@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>KidDose</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="header-container">
+      <header>
+        <div class="logo"><h1>KidDose</h1></div>
+        <nav></nav>
+      </header>
+    </div>
+    <div class="app">
+      <main>
+        <h3>
+          <b>KidDose:</b> The safest and easiest way to calculate medication
+          dosages for children.
+        </h3>
+        <h4>With KidDose, you can:</h4>
+        <ul>
+          <li>
+            Quickly and accurately calculate the correct dosage for any
+            medication.
+          </li>
+          <li>
+            Easily find information about medications and their side effects.
+          </li>
+
+          <li>Create and save medication profiles for your children.</li>
+
+          <li>Track your children's medication history.</li>
+
+          <li>Receive medication reminders and alerts.</li>
+        </ul>
+
+        <h4>KidDose is the perfect tool for:</h4>
+        <p>
+          Parents who want to ensure their children are receiving the correct
+          medication dosages. Caregivers who need to administer medication to
+          children.
+        </p>
+        <p>
+          Healthcare professionals who want to quickly and accurately calculate
+          medication dosages.
+        </p>
+
+        <h4>KidDose is:</h4>
+        <ul>
+          <li><b>Safe:</b> Based on the latest medical guidelines.</li>
+          <li><b>Easy to use:</b> Simple and intuitive interface.</li>
+          <li>
+            <b>Accurate:</b> Developed by experienced healthcare professionals.
+          </li>
+          <li>
+            <b> Comprehensive:</b> Includes information on a wide range of
+            medications.
+          </li>
+          <li><b>Affordable:</b> Available for a low monthly fee.</li>
+        </ul>
+      </main>
+      <aside>
+        <datalist class="data-list" id="medicines">
+          <!-- دي اسماء الادوية اللي بتظهر في الانبوت لما بتيجي تدور علي دوا -->
+          <!-- كل الداتا اللي هنا بتيجي من قاعدة البيانات عن طريق الجافا اسكريبت -->
+        </datalist>
+        <form id="form">
+          <div class="medicines">
+            <label for="medicines">Choose a medication</label>
+            <input
+              autocomplete="organization-title"
+              name="medicines"
+              type="search"
+              list="medicines"
+            />
+          </div>
+
+          <div class="weight">
+            <label for="weight">Weight</label>
+            <input type="number" name="weight" id="weight" />
+          </div>
+
+          <div class="submit">
+            <button type="submit">Calculate</button>
+          </div>
+
+          <div class="error-msg"></div>
+        </form>
+
+        <div class="result-container">
+          <div class="result"></div>
+        </div>
+      </aside>
+    </div>
+    <script src="/main/main.js" type="module"></script>
+    <script src="/main/DB.js" type="module"></script>
+  </body>
+</html>
